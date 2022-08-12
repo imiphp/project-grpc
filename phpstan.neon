@@ -1,0 +1,16 @@
+parameters:
+    level: 6
+
+    phpVersion: 70400
+
+    paths:
+        - .
+
+    excludePaths:
+        - .runtime
+        - vendor
+
+    treatPhpDocTypesAsCertain: false
+    checkGenericClassInNonGenericObjectType: false
+    checkMissingIterableValueType: false
+    reportUnmatchedIgnoredErrors: false

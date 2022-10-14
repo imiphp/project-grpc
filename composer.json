@@ -4,9 +4,9 @@
     "description": "imi 框架的 Grpc 项目。https://imiphp.com",
     "require": {
         "php": ">=7.4",
-        "imiphp/imi": "2.1.x-dev",
-        "imiphp/imi-swoole": "2.1.x-dev",
-        "imiphp/imi-grpc": "2.1.x-dev"
+        "imiphp/imi": "~2.1.0",
+        "imiphp/imi-swoole": "~2.1.0",
+        "imiphp/imi-grpc": "~2.1.0"
     },
     "require-dev": {
         "swoole/ide-helper": "^4.8",

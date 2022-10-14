@@ -9,9 +9,10 @@
         "imiphp/imi-grpc": "2.1.x-dev"
     },
     "require-dev": {
-        "swoole/ide-helper": "^4.8|^5.0",
-        "friendsofphp/php-cs-fixer": "~3.9.0",
-        "phpstan/phpstan": "~1.8.0"
+        "swoole/ide-helper": "^4.8",
+        "friendsofphp/php-cs-fixer": "~3.4.0",
+        "phpstan/phpstan": "~1.8.0",
+        "phpunit/phpunit": "~9.5.0"
     },
     "autoload": {
         "psr-4": {
@@ -23,7 +24,15 @@
             "init.php"
         ]
     },
+    "autoload-dev": {
+        "psr-4": {
+            "ImiApp\\Test\\": "./tests"
+        }
+    },
     "config": {
         "sort-packages": true
+    },
+    "scripts": {
+        "test": "@php ./vendor/bin/phpunit -c ./phpunit.xml"
     }
 }

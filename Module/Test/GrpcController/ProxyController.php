@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace ImiApp\GrpcServer\Controller;
+namespace ImiApp\Module\Test\GrpcController;
 
 use Imi\Aop\Annotation\Inject;
 use Imi\Controller\HttpController;

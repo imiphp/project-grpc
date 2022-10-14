@@ -1,8 +1,12 @@
 # 说明
 
+这是一个 imi gRPC 项目开发骨架项目，你可以基于这个项目来开发你的项目。
+
 imi 框架：<https://www.imiphp.com>
 
-imi gRPC 项目骨架，内置了 HTTP 代理网关的实现 `GrpcServer/Controller/ProxyController.php`。
+imi 文档：<https://doc.imiphp.com>
+
+内置了 HTTP 代理网关的实现 `GrpcServer/Controller/ProxyController.php`。
 
 ## 安装
 
@@ -35,18 +39,38 @@ Grpc 的 protobuf 生成：`cd grpc && protoc --php_out=./ grpc.proto`
 
 protoc 下载和安装：<https://github.com/protocolbuffers/protobuf/releases>
 
-## 格式化代码
+## 生产环境
 
-使用 php-cs-fixer 代码格式化。
+**关闭热更新：**`config/beans.php` 中 `hotUpdate.status` 设为 `false`
 
-`./vendor/bin/php-cs-fixer fix`
+## 代码质量
 
-使用支持 php-cs-fixer 的 IDE 或插件，也会自动格式化。
+### 格式化代码
 
-`.php-cs-fixer.php` 默认配置是 imi 的规范，仅供参考，如有需要可以自行定义。
+内置 `php-cs-fixer`，统一代码风格。
 
-## 代码静态检测
+配置文件 `.php-cs-fixer.php`，可根据自己实际需要进行配置，文档：<https://github.com/FriendsOfPHP/PHP-CS-Fixer/blob/master/doc/config.rst>
 
-使用 phpstan 代码静态检测。
+**格式化项目：** `./vendor/bin/php-cs-fixer fix`
 
-`./vendor/bin/phpstan analyse --memory-limit 1G`
+**格式化指定文件：** `./vendor/bin/php-cs-fixer fix test.php`
+
+### 代码静态分析
+
+内置 `phpstan`，可规范代码，排查出一些隐藏问题。
+
+配置文件 `phpstan.neon`，可根据自己实际需要进行配置，文档：<https://phpstan.org/config-reference>
+
+**分析项目：** `./vendor/bin/phpstan`
+
+**分析指定文件：** `./vendor/bin/phpstan test.php`
+
+### 测试用例
+
+内置 `phpunit`，可以实现自动化测试。
+
+**文档：**<https://phpunit.readthedocs.io/en/9.5/>
+
+**测试用例 demo：**`tests/Module/Test/TestServiceTest.php`
+
+**运行测试用例：**`composer test`

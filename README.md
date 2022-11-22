@@ -12,6 +12,24 @@ imi 文档：<https://doc.imiphp.com>
 
 创建项目：`composer create-project imiphp/project-grpc:~2.1.0`
 
+## 配置
+
+### 项目命名空间
+
+默认是 `ImiApp`，可以在 `composer.json` 中修改：
+
+* `autoload.psr-4.ImiApp`
+
+* `imi.namespace`
+
+然后替换代码中的命名空间即可。
+
+### 运行配置
+
+项目配置目录：`config`
+
+gRPC 服务器配置目录：`GrpcServer/config`
+
 ## 启动命令
 
 `vendor/bin/imi-swoole swoole/start`

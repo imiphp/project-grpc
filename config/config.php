@@ -48,8 +48,10 @@ return [
             'pool'    => [
                 'class'        => \Imi\Swoole\Db\Pool\CoroutineDbPool::class,
                 'config'       => [
-                    'maxResources'    => 16,
-                    'minResources'    => 0,
+                    'maxResources'              => 32,
+                    'minResources'              => 0,
+                    'checkStateWhenGetResource' => false,
+                    'heartbeatInterval'         => 60,
                 ],
             ],
             'resource'    => [
@@ -65,8 +67,10 @@ return [
             'pool'    => [
                 'class'        => \Imi\Swoole\Redis\Pool\CoroutineRedisPool::class,
                 'config'       => [
-                    'maxResources'    => 16,
-                    'minResources'    => 0,
+                    'maxResources'              => 32,
+                    'minResources'              => 0,
+                    'checkStateWhenGetResource' => false,
+                    'heartbeatInterval'         => 60,
                 ],
             ],
             'resource'    => [
@@ -79,8 +83,10 @@ return [
             'pool'    => [
                 'class'        => \Imi\Rpc\Client\Pool\RpcClientCoroutinePool::class,
                 'config'       => [
-                    'maxResources'  => 16,
-                    'minResources'  => 0,
+                    'maxResources'              => 32,
+                    'minResources'              => 0,
+                    'checkStateWhenGetResource' => false,
+                    'heartbeatInterval'         => 60,
                 ],
             ],
             'resource'    => [

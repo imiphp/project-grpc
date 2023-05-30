@@ -23,7 +23,7 @@ return [
     'mainServer' => [
         'namespace' => 'ImiApp\GrpcServer',
         'type'      => 'GrpcServer',
-        'host'      => '127.0.0.1',
+        'host'      => '0.0.0.0',
         'port'      => 8080,
         'configs'   => [
             'worker_num'      => env('SERVER_WORKER_NUM', 8080),

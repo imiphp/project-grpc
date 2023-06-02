@@ -17,6 +17,7 @@ return [
     ],
 
     'ignorePaths' => [
+        \dirname(__DIR__) . '/grpc',
     ],
 
     // Swoole 主服务器配置

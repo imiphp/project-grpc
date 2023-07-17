@@ -6,12 +6,13 @@ namespace ImiApp\Test;
 
 use Imi\App;
 use Imi\Cli\CliApp;
-use function Imi\env;
 use Imi\Swoole\SwooleApp;
 use PHPUnit\Runner\AfterLastTestHook;
 use PHPUnit\Runner\BeforeFirstTestHook;
 use Swoole\Coroutine;
 use Swoole\Coroutine\Channel;
+
+use function Imi\env;
 
 class PHPUnitHook implements BeforeFirstTestHook, AfterLastTestHook
 {

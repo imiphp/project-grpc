@@ -4,8 +4,9 @@ declare(strict_types=1);
 
 use Imi\App;
 use Imi\AppContexts;
-use function Imi\env;
 use Imi\Grpc\Client\GrpcClient;
+
+use function Imi\env;
 
 return [
     // 配置文件
